@@ -13,6 +13,7 @@ export default createGlobalStyle`
     text-decoration: none;
     -webkit-font-smoothing: antianalized;
     -moz-osx-font-smoothing: grayscale;
+    font-family: 'Poppins', sans-serif;
   }
 
   html{ 
