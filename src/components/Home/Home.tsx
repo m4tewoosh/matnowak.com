@@ -31,12 +31,18 @@ const StyledCirclesSquare = styled(CirclesSquare)`
   top: -3rem;
 `;
 
+const StyledContent = styled.div`
+  width: 100%;
+  padding-top: 12rem;
+`;
+
 const StyledName = styled.h2`
   position: relative;
   font-family: 'Montserrat', sans-serif;
   font-size: 6.4rem;
   font-weight: 700;
   margin-top: 30rem;
+  margin-bottom: 4rem;
   color: white;
 
   > span {
@@ -76,9 +82,11 @@ const StyledName = styled.h2`
   }
 `;
 
-const StyledContent = styled.div`
-  width: 100%;
-  padding-top: 12rem;
+const StyledText = styled.p`
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 70rem;
 `;
 
 const Home: React.FC = () => {
@@ -91,6 +99,10 @@ const Home: React.FC = () => {
           Matthew <span>Nowak</span>
           <StyledCirclesSquare />
         </StyledName>
+        <StyledText>Hello, I am Matthew Nowak, frontend developer</StyledText>
+        <StyledText>
+          based in Cracow, Poland. I mainly specialize in React.
+        </StyledText>
       </StyledContent>
     </StyledHome>
   );
