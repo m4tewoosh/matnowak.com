@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { ReactComponent as Blob } from '../../assets/svg/cornerBlob.svg';
 import { ReactComponent as Circle } from '../../assets/svg/circle.svg';
 import { ReactComponent as CirclesSquare } from '../../assets/svg/circlesSquare.svg';
+import { ReactComponent as Square } from '../../assets/svg/square.svg';
+// import { ReactComponent as MainBlob } from '../../assets/svg/mainBlob.svg';
+import MainBlob from '../MainBlob/MainBlob';
 
 const StyledHome = styled.div`
   position: relative;
@@ -25,6 +28,12 @@ const StyledCircle = styled(Circle)`
   bottom: 16.5rem;
 `;
 
+const StyledSquare = styled(Square)`
+  position: absolute;
+  right: 5rem;
+  top: -25rem;
+`;
+
 const StyledCirclesSquare = styled(CirclesSquare)`
   position: absolute;
   left: -4rem;
@@ -32,6 +41,9 @@ const StyledCirclesSquare = styled(CirclesSquare)`
 `;
 
 const StyledContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 100%;
   padding-top: 12rem;
 `;
@@ -112,22 +124,52 @@ const StyledButton = styled.button`
   }
 `;
 
+const StyledSurname = styled.p`
+  position: absolute;
+  left: 0;
+  bottom: -18.8rem;
+  padding: inherit;
+  /* transform: rotate(90deg); */
+  writing-mode: vertical-rl;
+  span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7.2rem;
+    font-weight: 700;
+    &:first-child {
+      color: white;
+    }
+    &:last-child {
+      color: #c4c4c4;
+    }
+  }
+`;
+
 const Home: React.FC = () => {
   return (
     <StyledHome>
       <StyledBlob />
       <StyledCircle />
       <StyledContent>
-        <StyledName>
-          Matthew <span>Nowak</span>
-          <StyledCirclesSquare />
-        </StyledName>
-        <StyledText>Hello, I am Matthew Nowak, frontend developer</StyledText>
-        <StyledText>
-          based in Cracow, Poland. I mainly specialize in React.
-        </StyledText>
-        <StyledButton>Download CV</StyledButton>
+        <div>
+          <StyledName>
+            Matthew <span>Nowak</span>
+            <StyledCirclesSquare />
+            <StyledSquare />
+          </StyledName>
+          <StyledText>Hello, I am Matthew Nowak, frontend developer</StyledText>
+          <StyledText>
+            based in Cracow, Poland. I mainly specialize in React.
+          </StyledText>
+          <StyledButton>Download CV</StyledButton>
+        </div>
+        <div>
+          <MainBlob />
+        </div>
       </StyledContent>
+      <StyledSurname>
+        <span>NO</span>
+        <span>WAK</span>
+      </StyledSurname>
     </StyledHome>
   );
 };

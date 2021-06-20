@@ -17,10 +17,10 @@ export default createGlobalStyle`
   }
 
   html{ 
-    @media(min-width: 1440px){
+    /* @media(min-width: 1440px){ */
 
     font-size: 62.5%;
-    }
+    /* } */
   }
 
 
