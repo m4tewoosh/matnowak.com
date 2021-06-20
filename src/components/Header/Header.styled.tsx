@@ -7,7 +7,6 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   width: 100%;
   padding: 0 23rem;
-  /* padding-top: 7.5rem; */
   height: 11rem;
   nav {
     display: flex;

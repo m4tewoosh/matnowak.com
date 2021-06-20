@@ -4,13 +4,11 @@ import { ReactComponent as Blob } from '../../assets/svg/cornerBlob.svg';
 import { ReactComponent as Circle } from '../../assets/svg/circle.svg';
 import { ReactComponent as CirclesSquare } from '../../assets/svg/circlesSquare.svg';
 import { ReactComponent as Square } from '../../assets/svg/square.svg';
-// import { ReactComponent as MainBlob } from '../../assets/svg/mainBlob.svg';
 import MainBlob from '../MainBlob/MainBlob';
 
 const StyledHome = styled.div`
   position: relative;
   width: 100vw;
-  /* height: calc(100vh - 8rem); */
   height: 100vh;
   background-color: #181333;
   padding: 0 23rem;
@@ -129,7 +127,6 @@ const StyledSurname = styled.p`
   left: 0;
   bottom: -15.8rem;
   padding: inherit;
-  /* transform: rotate(90deg); */
   writing-mode: vertical-rl;
   span {
     font-family: 'Montserrat', sans-serif;

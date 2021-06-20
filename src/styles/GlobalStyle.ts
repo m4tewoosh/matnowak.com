@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-      /* Reset */
+  /* Reset */
   *,
   *::before,
   *::after {
@@ -17,18 +17,11 @@ export default createGlobalStyle`
   }
 
   html{ 
-    /* @media(min-width: 1440px){ */
-
     font-size: 62.5%;
-    /* } */
   }
 
   ::-webkit-scrollbar-track {
-  /* box-shadow: inset 0 0 5px grey;  */
-  /* border-radius: 10px; */
-  /* background: transparent; */
-  /* background-color: red; */
-  /* display: none; */
+ 
   background-color: transparent;
 }
  
