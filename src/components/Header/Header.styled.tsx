@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   width: 100%;

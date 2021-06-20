@@ -5,6 +5,7 @@ import { ReactComponent as Circle } from '../../assets/svg/circle.svg';
 import { ReactComponent as CirclesSquare } from '../../assets/svg/circlesSquare.svg';
 import { ReactComponent as Square } from '../../assets/svg/square.svg';
 import MainBlob from '../MainBlob/MainBlob';
+import me from '../.././assets/png/me.png';
 
 const StyledHome = styled.div`
   position: relative;
@@ -12,6 +13,10 @@ const StyledHome = styled.div`
   height: 100vh;
   background-color: #181333;
   padding: 0 23rem;
+
+  @media (min-width: 2560px) {
+    padding: 0 60rem;
+  }
 `;
 
 const StyledBlob = styled(Blob)`
@@ -43,7 +48,7 @@ const StyledContent = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
-  padding-top: 12rem;
+  padding-top: 17rem;
 `;
 
 const StyledName = styled.h2`
@@ -128,6 +133,7 @@ const StyledSurname = styled.p`
   bottom: -15.8rem;
   padding: inherit;
   writing-mode: vertical-rl;
+  user-select: none;
   span {
     font-family: 'Montserrat', sans-serif;
     font-size: 7.2rem;
@@ -139,6 +145,14 @@ const StyledSurname = styled.p`
       color: #c4c4c4;
     }
   }
+`;
+
+const Me = styled.img`
+  position: absolute;
+  width: 45rem;
+  top: -8rem;
+  right: -5rem;
+  z-index: 200;
 `;
 
 const Home: React.FC = () => {
@@ -159,8 +173,9 @@ const Home: React.FC = () => {
           </StyledText>
           <StyledButton>Download CV</StyledButton>
         </div>
-        <div>
+        <div style={{ position: 'relative' }}>
           <MainBlob />
+          {/* <Me src={me} /> */}
         </div>
       </StyledContent>
       <StyledSurname>

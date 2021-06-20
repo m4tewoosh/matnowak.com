@@ -11,6 +11,10 @@ const StyledContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1600px) {
+    transform: scale(0.8);
+  }
 `;
 
 const StyledBlob = styled(Blob)`

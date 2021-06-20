@@ -19,19 +19,29 @@ export default createGlobalStyle`
   html{ 
     font-size: 62.5%;
   }
+  body { 
+    overflow-x: hidden;
+  }
 
-  ::-webkit-scrollbar-track {
- 
-  background-color: transparent;
+  ::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
 }
- 
 
-  ::-webkit-scrollbar {
-  width: 10px;
-  border-radius: 10px;
-
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
 }
-::-webkit-scrollbar-thumb {
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background: linear-gradient(
       128.53deg,
       rgba(192, 169, 240, 0) 28.63%,
@@ -39,7 +49,5 @@ export default createGlobalStyle`
       rgba(192, 169, 240, 0) 50.26%
     ),
     linear-gradient(0deg, #c2a6f1, #c2a6f1); 
-  border-radius: 10px;
 }
-
 `;
