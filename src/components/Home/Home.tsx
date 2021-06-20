@@ -33,7 +33,6 @@ const Home: React.FC = () => {
       <StyledBlob />
       <StyledCircle />
       {/* <StyledCirclesSquare /> */}
-      <h1>xd</h1>
     </StyledHome>
   );
 };
