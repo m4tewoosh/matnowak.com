@@ -89,6 +89,29 @@ const StyledText = styled.p`
   max-width: 70rem;
 `;
 
+const StyledButton = styled.button`
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: black;
+  width: 17rem;
+  height: 4.6rem;
+  border: none;
+  border-radius: 1rem;
+  margin-top: 6rem;
+  background: linear-gradient(
+      128.53deg,
+      rgba(192, 169, 240, 0) 28.63%,
+      #c0a9f0 38.5%,
+      rgba(192, 169, 240, 0) 50.26%
+    ),
+    linear-gradient(0deg, #c2a6f1, #c2a6f1);
+  transition: transform 0.2s ease 0s;
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-0.5rem);
+  }
+`;
+
 const Home: React.FC = () => {
   return (
     <StyledHome>
@@ -103,6 +126,7 @@ const Home: React.FC = () => {
         <StyledText>
           based in Cracow, Poland. I mainly specialize in React.
         </StyledText>
+        <StyledButton>Download CV</StyledButton>
       </StyledContent>
     </StyledHome>
   );
