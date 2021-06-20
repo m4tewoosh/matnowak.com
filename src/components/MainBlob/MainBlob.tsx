@@ -14,8 +14,9 @@ const StyledContainer = styled.div`
 `;
 
 const StyledBlob = styled(Blob)`
-  /* backdrop-filter: blur(20px); */
-  z-index: 100;
+  clip-path: url(#mainBlob);
+  backdrop-filter: blur(10px);
+  z-index: 200;
 `;
 
 const StyledContour1 = styled(Contour1)`
@@ -33,32 +34,32 @@ const StyledContour3 = styled(Contour3)`
 
 const StyledCircle1 = styled(Circle1)`
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   left: 5rem;
-  z-index: 99;
+  z-index: 2;
 `;
 
 const StyledCircle2 = styled(Circle2)`
   position: absolute;
   bottom: 5rem;
   right: -4.4rem;
-  z-index: 1;
+  z-index: 0;
 `;
 
 const StyledCircle3 = styled(Circle3)`
   position: absolute;
   bottom: -20rem;
   left: -5rem;
-  z-index: 1;
+  z-index: 2;
 `;
 
 const MainBlob: React.FC = () => {
   return (
     <StyledContainer>
+      <StyledBlob />
       <StyledCircle1 />
       <StyledCircle2 />
       <StyledCircle3 />
-      <StyledBlob />
       <StyledContour1 />
       <StyledContour2 />
       <StyledContour3 />

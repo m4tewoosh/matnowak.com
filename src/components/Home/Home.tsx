@@ -127,7 +127,7 @@ const StyledButton = styled.button`
 const StyledSurname = styled.p`
   position: absolute;
   left: 0;
-  bottom: -18.8rem;
+  bottom: -15.8rem;
   padding: inherit;
   /* transform: rotate(90deg); */
   writing-mode: vertical-rl;
@@ -167,8 +167,8 @@ const Home: React.FC = () => {
         </div>
       </StyledContent>
       <StyledSurname>
-        <span>NO</span>
-        <span>WAK</span>
+        <span>No</span>
+        <span>wak</span>
       </StyledSurname>
     </StyledHome>
   );

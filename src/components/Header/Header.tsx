@@ -13,6 +13,8 @@ const StyledContact = styled.button`
 
   &:hover {
     cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: transparent;
   }
 `;
 
