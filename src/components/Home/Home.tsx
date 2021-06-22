@@ -151,7 +151,7 @@ const StyledSurname = styled.p`
 
 const Home: React.FC = () => {
   return (
-    <StyledHome>
+    <StyledHome id="home">
       <StyledBlob />
       <StyledCircle />
       <StyledContent>

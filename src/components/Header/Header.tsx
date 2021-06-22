@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { StyledHeader } from './Header.styled';
+import { Link } from 'react-scroll';
 
 const StyledContact = styled.button`
   font-size: 1.6rem;
@@ -25,10 +26,14 @@ const Header: React.FC = () => {
       <nav>
         <ul>
           <li>
-            <button>Home</button>
+            <Link to="home" spy={true} smooth={true}>
+              <button>Home</button>
+            </Link>
           </li>
           <li>
-            <button>About</button>
+            <Link to="about" spy={true} smooth={true}>
+              <button>About</button>
+            </Link>
           </li>
           <li>
             <button>Technologies</button>

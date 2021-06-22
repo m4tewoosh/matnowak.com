@@ -31,7 +31,7 @@ const Me = styled.img`
 
 const About: React.FC = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id="about">
       <Header>About me</Header>
       <Text>
         I have started my journey with programming a few years ago in school. I
