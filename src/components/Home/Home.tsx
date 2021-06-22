@@ -129,7 +129,7 @@ const StyledButton = styled.button`
 
 const StyledSurname = styled.p`
   position: absolute;
-  left: 0;
+  left: -1.4rem;
   bottom: -15.8rem;
   padding: inherit;
   writing-mode: vertical-rl;
@@ -138,6 +138,8 @@ const StyledSurname = styled.p`
     font-family: 'Montserrat', sans-serif;
     font-size: 7.2rem;
     font-weight: 700;
+    text-align: bottom;
+
     &:first-child {
       color: white;
     }
@@ -145,14 +147,6 @@ const StyledSurname = styled.p`
       color: #c4c4c4;
     }
   }
-`;
-
-const Me = styled.img`
-  position: absolute;
-  width: 45rem;
-  top: -8rem;
-  right: -5rem;
-  z-index: 200;
 `;
 
 const Home: React.FC = () => {
@@ -175,7 +169,6 @@ const Home: React.FC = () => {
         </div>
         <div style={{ position: 'relative' }}>
           <MainBlob />
-          {/* <Me src={me} /> */}
         </div>
       </StyledContent>
       <StyledSurname>
