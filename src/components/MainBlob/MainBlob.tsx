@@ -15,6 +15,12 @@ const StyledContainer = styled.div`
   @media (max-width: 1600px) {
     transform: scale(0.8);
   }
+  @media (max-width: 1250px) {
+    transform: scale(0.6);
+  }
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const StyledBlob = styled(Blob)`

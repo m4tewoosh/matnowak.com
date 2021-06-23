@@ -15,7 +15,17 @@ const StyledHome = styled.div`
   padding: 0 23rem;
 
   @media (min-width: 2560px) {
-    padding: 0 60rem;
+    padding: 0 80rem;
+  }
+
+  @media (max-width: 1550px) {
+    padding: 0 15rem;
+  }
+  @media (max-width: 900px) {
+    padding: 0 8rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
   }
 `;
 
@@ -49,6 +59,12 @@ const StyledContent = styled.div`
   align-items: flex-end;
   width: 100%;
   padding-top: 17rem;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const StyledName = styled.h2`
@@ -59,6 +75,13 @@ const StyledName = styled.h2`
   margin-top: 30rem;
   margin-bottom: 4rem;
   color: white;
+
+  @media (max-width: 1550px) {
+    font-size: 4.8rem;
+  }
+  @media (max-width: 900px) {
+    margin-top: 15rem;
+  }
 
   > span {
     font-family: inherit;
@@ -102,6 +125,10 @@ const StyledText = styled.p`
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
   max-width: 70rem;
+
+  @media (max-width: 1550px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const StyledButton = styled.button`

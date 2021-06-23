@@ -5,13 +5,17 @@ const StyledAbout = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10rem 23rem;
+  padding: 7rem 23rem;
+
+  @media (max-width: 1025px) {
+    padding: 5rem 8rem;
+  }
 `;
 
 const Header = styled.h2`
   font-size: 3.2rem;
   font-weight: 700;
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
 `;
 
 const Text = styled.p`
