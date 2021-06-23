@@ -6,20 +6,20 @@ import { ReactComponent as Contour3 } from '../../assets/svg/contour3.svg';
 import { ReactComponent as Circle1 } from '../../assets/svg/circle1.svg';
 import { ReactComponent as Circle2 } from '../../assets/svg/circle2.svg';
 import { ReactComponent as Circle3 } from '../../assets/svg/circle3.svg';
+import media from '../../styles/media';
 
 const StyledContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  margin-right: 8rem;
 
-  @media (max-width: 1600px) {
+  @media ${media.laptopL} {
     transform: scale(0.8);
   }
-  @media (max-width: 1250px) {
-    transform: scale(0.6);
-  }
-  @media (max-width: 900px) {
-    display: none;
+  @media ${media.laptop} {
+    transform: scale(0.7);
+    margin-right: 3rem;
   }
 `;
 

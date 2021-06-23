@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-
+import media from './media';
 export default createGlobalStyle`
   /* Reset */
   *,
@@ -18,6 +18,15 @@ export default createGlobalStyle`
 
   html{ 
     font-size: 62.5%;
+
+    @media ${media.tablet}{
+      font-size: 55%;
+    }
+    
+    @media ${media.laptop}{
+      font-size: 50%;
+    }
+   
  
   }
   body { 
