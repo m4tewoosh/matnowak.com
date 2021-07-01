@@ -3,6 +3,7 @@ import media from '../../styles/media';
 
 export const StyledHeader = styled.header`
   position: fixed;
+  top: 0;
   z-index: 1000;
   display: flex;
   justify-content: flex-end;

@@ -72,14 +72,25 @@ export const StyledContent = styled.div`
       max-height: 5rem;
     }
   }
-  @media ${media.mobileL} {
-    padding: 5rem;
-    padding-top: 40rem;
-    justify-content: center;
 
+  @media ${media.tabletL} {
+    padding: 0rem 7rem;
+    padding-top: 20rem;
+  }
+  @media ${media.mobileL} {
+    /* padding: 5rem; */
+    /* padding-top: 40rem; */
+    padding: 0;
+    padding: 0 5.5rem;
+    justify-content: flex-end;
+    align-items: center;
     .spacer {
       display: none;
     }
+  }
+
+  @media (max-height: 800px) {
+    justify-content: center;
   }
 `;
 
@@ -145,6 +156,7 @@ export const StyledText = styled.p`
 
   @media ${media.tabletL} {
     font-size: 1.6rem;
+    /* text-align: start; */
   }
 `;
 
@@ -172,6 +184,10 @@ export const StyledButton = styled.button`
 
   @media ${media.tabletL} {
     margin-top: 4rem;
+  }
+
+  @media ${media.mobileL} {
+    align-self: center;
   }
 `;
 
@@ -207,12 +223,18 @@ export const StyledSurname = styled.p`
 
 export const BlobWrapper = styled.div`
   position: relative;
-
+  @media ${media.tabletL} {
+    transform: scale(0.9);
+  }
   @media ${media.tablet} {
     transform: scale(0.7);
   }
   @media ${media.mobileL} {
-    transform: scale(0.5);
+    transform: scale(0.55);
+  }
+
+  @media (max-height: 800px) {
+    height: 25rem;
   }
 `;
 
@@ -220,6 +242,6 @@ export const NameWrapper = styled.div`
   @media ${media.mobileL} {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
   }
 `;

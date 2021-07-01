@@ -15,6 +15,9 @@ const StyledContainer = styled.div`
   justify-content: center;
   margin-right: 8rem;
 
+  @media ${media.desktop} {
+    transform: scale(0.85);
+  }
   @media ${media.laptopL} {
     transform: scale(0.8);
   }
@@ -96,7 +99,7 @@ const MainBlob: React.FC = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={0.5}
-            opacity={0.3}
+            opacity={0.4}
             transition={{
               duration: 2,
               ease: 'easeInOut',
@@ -124,7 +127,7 @@ const MainBlob: React.FC = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={0.5}
-            opacity={0.25}
+            opacity={0.35}
             transition={{
               duration: 2.5,
               ease: 'easeInOut',
@@ -153,7 +156,7 @@ const MainBlob: React.FC = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={0.5}
-            opacity={0.2}
+            opacity={0.3}
             transition={{
               duration: 3,
               ease: 'easeInOut',

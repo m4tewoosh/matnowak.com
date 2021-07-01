@@ -21,7 +21,6 @@ const Home: React.FC = () => {
   return (
     <S.StyledHome id="home">
       <S.StyledBlob />
-      {/* <S.StyledCircle /> */}
       <StyledMotionCircle>
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
@@ -36,23 +35,17 @@ const Home: React.FC = () => {
             stroke="white"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth={0.5}
+            strokeWidth={1}
+            opacity="0.2"
             cx={-54}
             cy={100}
             r={99.5}
             transition={{ duration: 2, ease: 'easeInOut' }}
             initial={{
-              // opacity: 0,
-              // cx: -54,
-              // cy: 0,
               r: 50,
             }}
             animate={{
-              opacity: 0.6,
-
-              // cx: -54,
               r: 99.5,
-              // cx: [null, 100, 200],
             }}
           />
         </motion.svg>
@@ -62,31 +55,30 @@ const Home: React.FC = () => {
           <S.StyledName>
             Matthew <span>Nowak</span>
             <S.StyledCirclesSquare />
-            {/* <S.StyledSquare /> */}
             <StyledMotion>
               <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
                 viewBox="0 0 78 78"
                 width="78"
                 height="78"
+                fill="none"
+                opacity="0.4"
               >
                 <motion.path
                   stroke="white"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={0.5}
+                  opacity="0.4"
+                  strokeWidth={1}
                   transition={{
                     duration: 2,
                     ease: 'easeInOut',
                   }}
                   initial={{
-                    opacity: 0,
                     rotate: -45,
                     pathLength: 0,
                   }}
                   animate={{
-                    opacity: 0.6,
                     rotate: 0,
                     pathLength: 1,
                   }}
