@@ -10,6 +10,7 @@ const StyledBurger = styled.button<StyledBurgerProps>`
   height: 3.5rem;
   border: none;
   background-color: transparent;
+  z-index: 1000;
 
   .line {
     width: 100%;
@@ -51,7 +52,7 @@ const StyledBurger = styled.button<StyledBurgerProps>`
   @media ${media.tabletL} {
     display: flex;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     display: none;
   }
 `;

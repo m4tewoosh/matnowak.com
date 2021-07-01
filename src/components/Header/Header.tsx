@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { StyledHeader } from './Header.styles';
 import Burger from './Burger/Burger';
 import { useState } from 'react';
@@ -10,7 +9,7 @@ const Header: React.FC = () => {
   return (
     <StyledHeader>
       <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
-      <Menu isOpen={isOpen} />
+      <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
     </StyledHeader>
   );
 };

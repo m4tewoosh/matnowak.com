@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { StyledMenu } from './Menu.styles';
 export interface MenuProps {
   isOpen: Boolean;
+  setIsOpen: Function;
 }
 
 const StyledContact = styled.button`
@@ -21,22 +22,22 @@ const StyledContact = styled.button`
     background-color: transparent;
   }
 `;
-const Menu: React.FC<MenuProps> = ({ isOpen }) => {
+const Menu: React.FC<MenuProps> = ({ isOpen, setIsOpen }) => {
   return (
     <StyledMenu isOpen={isOpen}>
       <ul>
         <li>
           <Link to="home" spy={true} smooth={true}>
-            <button>Home</button>
+            <button onClick={() => setIsOpen(!isOpen)}>Home</button>
           </Link>
         </li>
         <li>
           <Link to="about" spy={true} smooth={true}>
-            <button>About</button>
+            <button onClick={() => setIsOpen(!isOpen)}>About</button>
           </Link>
         </li>
         <li>
-          <button>Technologies</button>
+          <button onClick={() => setIsOpen(!isOpen)}>Technologies</button>
         </li>
       </ul>
       <StyledContact>Contact</StyledContact>

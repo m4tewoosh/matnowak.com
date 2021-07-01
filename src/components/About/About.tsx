@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import me from '../../assets/jpg/me.jpg';
+import media from '../../styles/media';
 
 const StyledAbout = styled.section`
   display: flex;
@@ -9,6 +10,10 @@ const StyledAbout = styled.section`
 
   @media (max-width: 1025px) {
     padding: 5rem 8rem;
+  }
+
+  @media ${media.mobileL} {
+    padding: 5rem 3rem;
   }
 `;
 
@@ -25,12 +30,18 @@ const Text = styled.p`
   > span strong {
     font-weight: 600;
   }
+  @media ${media.mobileL} {
+    max-width: 80%;
+  }
 `;
 
 const Me = styled.img`
   width: 350px;
   margin-top: 5rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  @media ${media.mobileL} {
+    width: 250px;
+  }
 `;
 
 const About: React.FC = () => {

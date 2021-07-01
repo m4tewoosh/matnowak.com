@@ -11,7 +11,7 @@ const App: React.FC = () => {
       <GlobalStyle />
       <Header />
       <Home />
-      {/* <About /> */}
+      <About />
       {/* <Projects /> */}
     </>
   );

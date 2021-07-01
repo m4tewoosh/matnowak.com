@@ -5,7 +5,7 @@ import { ReactComponent as CirclesSquare } from '../../assets/svg/circlesSquare.
 import { ReactComponent as Square } from '../../assets/svg/square.svg';
 import media from '../../styles/media';
 
-export const StyledHome = styled.div`
+export const StyledHome = styled.section`
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -28,6 +28,10 @@ export const StyledSquare = styled(Square)`
   position: absolute;
   right: 5rem;
   top: -25rem;
+
+  @media ${media.mobileL} {
+    top: -11rem;
+  }
 `;
 
 export const StyledCirclesSquare = styled(CirclesSquare)`
@@ -39,7 +43,7 @@ export const StyledCirclesSquare = styled(CirclesSquare)`
 export const StyledContent = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   padding: 0rem 20rem;
@@ -61,6 +65,7 @@ export const StyledContent = styled.div`
   @media ${media.tabletL} {
     flex-direction: column;
     padding-top: 20rem;
+    justify-content: center;
 
     .spacer {
       display: flex;
@@ -69,7 +74,7 @@ export const StyledContent = styled.div`
   }
   @media ${media.mobileL} {
     padding: 5rem;
-    padding-top: 35rem;
+    padding-top: 40rem;
     justify-content: center;
 
     .spacer {
@@ -177,6 +182,7 @@ export const StyledSurname = styled.p`
   padding: inherit;
   writing-mode: vertical-rl;
   user-select: none;
+  margin-left: 20rem;
   span {
     font-family: 'Montserrat', sans-serif;
     font-size: 7.2rem;
@@ -191,8 +197,11 @@ export const StyledSurname = styled.p`
     }
   }
 
+  @media ${media.laptopL} {
+    margin-left: 10rem;
+  }
   @media ${media.mobileL} {
-    padding-left: 5rem;
+    margin-left: 0;
   }
 `;
 
