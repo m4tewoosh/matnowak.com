@@ -37,7 +37,9 @@ const Menu: React.FC<MenuProps> = ({ isOpen, setIsOpen }) => {
           </Link>
         </li>
         <li>
-          <button onClick={() => setIsOpen(!isOpen)}>Technologies</button>
+          <Link to="technologies" spy={true} smooth={true}>
+            <button onClick={() => setIsOpen(!isOpen)}>Technologies</button>
+          </Link>
         </li>
       </ul>
       <StyledContact>Contact</StyledContact>
