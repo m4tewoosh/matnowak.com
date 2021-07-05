@@ -18,6 +18,7 @@ export default createGlobalStyle`
 
   html{ 
     font-size: 62.5%;
+    image-rendering: -webkit-optimize-contrast;
 
     @media ${media.tablet}{
       font-size: 55%;
@@ -39,12 +40,14 @@ export default createGlobalStyle`
 	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
 	background-color: #F5F5F5;
+
 }
 
 ::-webkit-scrollbar
 {
 	width: 12px;
 	background-color: #F5F5F5;
+  
 }
 
 ::-webkit-scrollbar-thumb
@@ -52,12 +55,6 @@ export default createGlobalStyle`
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background: linear-gradient(
-      128.53deg,
-      rgba(192, 169, 240, 0) 28.63%,
-      #c0a9f0 38.5%,
-      rgba(192, 169, 240, 0) 50.26%
-    ),
-    linear-gradient(0deg, #c2a6f1, #c2a6f1); 
+  background:linear-gradient(120deg, #a6c0fe 0%,#f68084 100%);
 }
 `;
