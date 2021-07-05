@@ -1,7 +1,7 @@
 import React from 'react';
 import MainBlob from '../MainBlob/MainBlob';
 import { motion } from 'framer-motion';
-
+import media from '../../styles/media';
 import styled from 'styled-components';
 import * as S from './Home.styles';
 
@@ -9,6 +9,10 @@ const StyledMotion = styled.div`
   position: absolute;
   top: -13rem;
   right: 3rem;
+
+  @media ${media.mobileL} {
+    top: -6rem;
+  }
 `;
 
 const StyledMotionCircle = styled.div`
@@ -88,19 +92,15 @@ const Home: React.FC = () => {
             </StyledMotion>
           </S.StyledName>
           <S.StyledText>
-            Hello, I am Matthew Nowak, frontend developer
-          </S.StyledText>
-          <S.StyledText>
-            based in Cracow, Poland. I mainly specialize in React.
+            Hello, I am Matthew Nowak, 20 years old frontend developer based in
+            Cracow, Poland. I mainly specialize in React.
           </S.StyledText>
           <S.StyledButton>Download CV</S.StyledButton>
         </S.NameWrapper>
-        <div className="spacer"></div>
-        <S.BlobWrapper>
-          <div style={{ position: 'relative' }}>
-            <MainBlob />
-          </div>
-        </S.BlobWrapper>
+        {/* <div className="spacer"></div> */}
+        {/* <S.BlobWrapper> */}
+        <MainBlob />
+        {/* </S.BlobWrapper> */}
       </S.StyledContent>
       <S.StyledSurname>
         <span>No</span>

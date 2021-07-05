@@ -32,6 +32,8 @@ const StyledBurger = styled.button<StyledBurgerProps>`
         rgba(192, 169, 240, 0) 50.26%
       ),
       linear-gradient(0deg, #c2a6f1, #c2a6f1);
+    background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+
     transition: all 0.3s linear;
 
     :first-child {
@@ -49,10 +51,10 @@ const StyledBurger = styled.button<StyledBurgerProps>`
     }
   }
 
-  @media ${media.tabletL} {
+  @media ${media.laptopL} {
     display: flex;
   }
-  @media (min-width: 769px) {
+  @media (min-width: 1251px) {
     display: none;
   }
 `;

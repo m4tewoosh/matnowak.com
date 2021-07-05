@@ -15,10 +15,11 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
     li {
       button {
         position: relative;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         font-weight: 300;
         border: none;
         color: rgba(255, 254, 255, 0.4);
+
         background-color: unset;
         margin-right: 5rem;
 
@@ -57,6 +58,7 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
               rgba(192, 169, 240, 0) 50.26%
             ),
             linear-gradient(0deg, #c2a6f1, #c2a6f1);
+          background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
 
           transition: width 0.3s ease 0s, left 0.3s ease 0s;
         }
@@ -64,7 +66,7 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
     }
   }
 
-  @media ${media.tablet} {
+  @media ${media.laptopL} {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -117,6 +119,17 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
     }
     ul li button {
       font-size: 2.2rem;
+    }
+  }
+  @media ${media.mobileS} {
+    button {
+      font-size: 1.8rem;
+      width: 14rem;
+      height: 5rem;
+      margin-top: 0.5rem;
+    }
+    ul li button {
+      font-size: 1.8rem;
     }
   }
 `;

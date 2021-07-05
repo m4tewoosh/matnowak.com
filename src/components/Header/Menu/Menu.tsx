@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
 import { StyledMenu } from './Menu.styles';
@@ -39,6 +40,11 @@ const Menu: React.FC<MenuProps> = ({ isOpen, setIsOpen }) => {
         <li>
           <Link to="technologies" spy={true} smooth={true}>
             <button onClick={() => setIsOpen(!isOpen)}>Technologies</button>
+          </Link>
+        </li>
+        <li>
+          <Link to="projects" spy={true} smooth={true}>
+            <button onClick={() => setIsOpen(!isOpen)}>Projects</button>
           </Link>
         </li>
       </ul>

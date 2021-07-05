@@ -30,6 +30,7 @@ export const StyledSquare = styled(Square)`
   top: -25rem;
 
   @media ${media.mobileL} {
+    /* display */
     top: -11rem;
   }
 `;
@@ -43,7 +44,7 @@ export const StyledCirclesSquare = styled(CirclesSquare)`
 export const StyledContent = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   height: 100%;
   padding: 0rem 20rem;
@@ -54,7 +55,9 @@ export const StyledContent = styled.div`
     min-width: 20rem;
     max-width: 50rem;
   }
-
+  @media ${media.desktop} {
+    padding: 0rem 15rem;
+  }
   @media ${media.laptopL} {
     padding: 0rem 10rem;
     .spacer {
@@ -89,9 +92,9 @@ export const StyledContent = styled.div`
     }
   }
 
-  @media (max-height: 800px) {
+  /* @media (max-height: 800px) {
     justify-content: center;
-  }
+  } */
 `;
 
 export const StyledName = styled.h2`
@@ -102,20 +105,26 @@ export const StyledName = styled.h2`
   margin-bottom: 4rem;
   color: white;
 
+  @media ${media.desktop} {
+    font-size: 5rem;
+  }
   @media ${media.laptop} {
-    font-size: 5.2rem;
+    /* font-size: 5.2rem; */
     margin-bottom: 3rem;
   }
   @media ${media.tabletL} {
-    font-size: 4.8rem;
+    /* font-size: 4.8rem; */
     margin-bottom: 3rem;
+  }
+  @media ${media.mobileL} {
+    /* font-size: 4.8rem; */
   }
 
   > span {
     font-family: inherit;
     font-weight: inherit;
     font-size: inherit;
-    background-color: white;
+
     background: linear-gradient(
         123.35deg,
         #ebf3d0 0%,
@@ -138,8 +147,8 @@ export const StyledName = styled.h2`
         rgba(192, 169, 240, 0) 50.26%
       ),
       linear-gradient(0deg, #c2a6f1, #c2a6f1);
+    background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
 
-    background-size: 100%;
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -153,15 +162,14 @@ export const StyledText = styled.p`
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
   max-width: 70rem;
-
-  @media ${media.tabletL} {
-    font-size: 1.6rem;
-    /* text-align: start; */
+  @media ${media.mobileL} {
+    /* font-size: 4.8rem; */
+    text-align: start;
   }
 `;
 
 export const StyledButton = styled.button`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: black;
   width: 17rem;
@@ -176,6 +184,7 @@ export const StyledButton = styled.button`
       rgba(192, 169, 240, 0) 50.26%
     ),
     linear-gradient(0deg, #c2a6f1, #c2a6f1);
+  background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
   transition: transform 0.2s ease 0s;
   &:hover {
     cursor: pointer;
@@ -209,10 +218,41 @@ export const StyledSurname = styled.p`
       color: white;
     }
     &:last-child {
-      color: #c4c4c4;
+      background: linear-gradient(
+          123.35deg,
+          #ebf3d0 0%,
+          rgba(235, 243, 208, 0) 18.4%
+        ),
+        radial-gradient(
+          29.9% 70.94% at 44.25% 86.96%,
+          #dc8ddc 0%,
+          rgba(220, 141, 220, 0) 100%
+        ),
+        radial-gradient(
+          33.83% 53.57% at 35.87% 100%,
+          #dc8ddc 0%,
+          rgba(220, 141, 220, 0) 100%
+        ),
+        linear-gradient(
+          128.53deg,
+          rgba(192, 169, 240, 0) 28.63%,
+          #c0a9f0 38.5%,
+          rgba(192, 169, 240, 0) 50.26%
+        ),
+        linear-gradient(0deg, #c2a6f1, #c2a6f1);
+      background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
     }
   }
 
+  @media ${media.desktop} {
+    margin-left: 15rem;
+  }
   @media ${media.laptopL} {
     margin-left: 10rem;
   }
@@ -230,12 +270,12 @@ export const BlobWrapper = styled.div`
     transform: scale(0.7);
   }
   @media ${media.mobileL} {
-    transform: scale(0.55);
+    transform: scale(0.4);
   }
 
-  @media (max-height: 800px) {
+  /* @media (max-height: 800px) {
     height: 25rem;
-  }
+  } */
 `;
 
 export const NameWrapper = styled.div`

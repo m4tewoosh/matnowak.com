@@ -6,7 +6,7 @@ const StyledAbout = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 7rem 23rem;
+  padding: 7rem 20rem;
 
   @media (max-width: 1025px) {
     padding: 5rem 8rem;
@@ -18,7 +18,8 @@ const StyledAbout = styled.section`
 `;
 
 const Header = styled.h2`
-  font-size: 3.2rem;
+  color: #181333;
+  font-size: 4rem;
   font-weight: 700;
   margin-bottom: 7rem;
 `;
@@ -29,6 +30,7 @@ const Text = styled.p`
   max-width: 60%;
   > span strong {
     font-weight: 600;
+    color: #181333;
   }
   @media ${media.mobileL} {
     max-width: 80%;
@@ -50,12 +52,12 @@ const About: React.FC = () => {
       <Header>About me</Header>
       <Text>
         I have started my journey with programming a few years ago in school. I
-        didn't like it at start, but with every next challenging project I've
+        didn't like it at start, but with every next challenging project, I've
         earned experience and started having fun with It. When I discovered{' '}
         <span>
           <strong>React</strong>
         </span>
-        , I immediately fell in love with this technology. Now I've done few big
+        , I immediately fell in love with this technology. Now I've done few
         commercial projects with it, and I'm still amazed of it and wanting to
         raise my skill.
       </Text>

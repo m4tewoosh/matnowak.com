@@ -25,6 +25,14 @@ const StyledContainer = styled.div`
     transform: scale(0.7);
     margin-right: 3rem;
   }
+  @media ${media.tablet} {
+    transform: scale(0.55);
+  }
+  @media ${media.mobileL} {
+    height: 45vh;
+    transform: scale(0.4);
+    margin-right: 3rem;
+  }
 `;
 
 const StyledBlob = styled(Blob)`
@@ -33,26 +41,16 @@ const StyledBlob = styled(Blob)`
   z-index: 200;
 `;
 
-// const StyledContour1 = styled(Contour1)`
-//   position: absolute;
-//   top: -2.2rem;
-// `;
 const StyledContour1 = styled.div`
   position: absolute;
   top: -2.2rem;
 `;
-// const StyledContour2 = styled(Contour2)`
-//   position: absolute;
-//   top: -5rem;
-// `;
+
 const StyledContour2 = styled.div`
   position: absolute;
   top: -5rem;
 `;
-// const StyledContour3 = styled(Contour3)`
-//   position: absolute;
-//   top: -8rem;
-// `;
+
 const StyledContour3 = styled.div`
   position: absolute;
   top: -8rem;
@@ -68,7 +66,7 @@ const StyledCircle1 = styled(Circle1)`
 const StyledCircle2 = styled(Circle2)`
   position: absolute;
   bottom: 5rem;
-  right: -4.4rem;
+  right: -6.4rem;
   z-index: 0;
 `;
 
@@ -85,7 +83,7 @@ const MainBlob: React.FC = () => {
       <StyledBlob />
       <StyledCircle1 />
       <StyledCircle2 />
-      <StyledCircle3 />
+      {/* <StyledCircle3 /> */}
       <StyledContour1>
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
