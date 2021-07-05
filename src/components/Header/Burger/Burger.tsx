@@ -15,25 +15,7 @@ const StyledBurger = styled.button<StyledBurgerProps>`
   .line {
     width: 100%;
     height: 0.4rem;
-    background: radial-gradient(
-        29.9% 70.94% at 44.25% 86.96%,
-        #dc8ddc 0%,
-        rgba(220, 141, 220, 0) 100%
-      ),
-      radial-gradient(
-        33.83% 53.57% at 35.87% 100%,
-        #dc8ddc 0%,
-        rgba(220, 141, 220, 0) 100%
-      ),
-      linear-gradient(
-        128.53deg,
-        rgba(192, 169, 240, 0) 28.63%,
-        #c0a9f0 38.5%,
-        rgba(192, 169, 240, 0) 50.26%
-      ),
-      linear-gradient(0deg, #c2a6f1, #c2a6f1);
-    background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
-
+    background: var(--gradient);
     transition: all 0.3s linear;
 
     :first-child {

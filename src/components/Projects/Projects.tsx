@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import containers0 from '../../assets/png/containers/c0.png';
 import containers1 from '../../assets/png/containers/c1.png';
 import containers2 from '../../assets/png/containers/c2.png';
 import containers3 from '../../assets/png/containers/c3.png';
@@ -32,6 +33,9 @@ const StyledProjects = styled.section`
   @media ${media.mobileL} {
     padding: 5rem 6rem;
   }
+  @media ${media.mobileS} {
+    padding: 5rem 4rem;
+  }
 `;
 
 const StyledSquare = styled(Square)`
@@ -49,7 +53,7 @@ const StyledSquare = styled(Square)`
   }
 `;
 
-const ContainersProject = styled.div`
+const ProjectWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -74,6 +78,12 @@ const Description = styled.div`
       margin-bottom: 3rem;
     }
   }
+`;
+
+const Spacer = styled.div`
+  flex: 1;
+  min-width: 5rem;
+  max-width: 10rem;
 `;
 
 const CarouselWrapper = styled.div<{ justify: String }>`
@@ -118,7 +128,7 @@ const Projects: React.FC = () => {
       <Header>Projects</Header>
       {/* <ProjectsSection> */}
 
-      <ContainersProject>
+      <ProjectWrapper>
         <Description>
           <ProjectHeader>
             Containers ERP
@@ -132,8 +142,12 @@ const Projects: React.FC = () => {
             spend for petrol. Frontend is built with ReactJS and Ant Design.
           </p>
         </Description>
+        <Spacer />
         <CarouselWrapper justify="end">
           <Carousel showStatus={false} showThumbs={false}>
+            <div>
+              <img src={containers0} />
+            </div>
             <div>
               <img src={containers1} />
             </div>
@@ -157,8 +171,8 @@ const Projects: React.FC = () => {
             </div>
           </Carousel>
         </CarouselWrapper>
-      </ContainersProject>
-      <ContainersProject>
+      </ProjectWrapper>
+      <ProjectWrapper>
         <CarouselWrapper justify="start">
           <Carousel showStatus={false} showThumbs={false}>
             <div>
@@ -169,6 +183,7 @@ const Projects: React.FC = () => {
             </div>
           </Carousel>
         </CarouselWrapper>
+        <Spacer />
         <Description>
           <ProjectHeader>
             Sign Up Application
@@ -182,7 +197,7 @@ const Projects: React.FC = () => {
             created you can log in to the panel.
           </p>
         </Description>
-      </ContainersProject>
+      </ProjectWrapper>
     </StyledProjects>
   );
 };

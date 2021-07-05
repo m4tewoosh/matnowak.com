@@ -15,6 +15,9 @@ const StyledAbout = styled.section`
   @media ${media.mobileL} {
     padding: 5rem 3rem;
   }
+  @media ${media.mobileL} {
+    padding: 5rem 1rem;
+  }
 `;
 
 const Header = styled.h2`
@@ -27,10 +30,16 @@ const Header = styled.h2`
 const Text = styled.p`
   font-size: 1.8rem;
   text-align: justify;
-  max-width: 60%;
+  max-width: 30%;
   > span strong {
     font-weight: 600;
     color: #181333;
+  }
+  @media ${media.desktop} {
+    max-width: 60%;
+  }
+  @media ${media.tablet} {
+    max-width: 75%;
   }
   @media ${media.mobileL} {
     max-width: 80%;
@@ -41,8 +50,8 @@ const Me = styled.img`
   width: 350px;
   margin-top: 5rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  @media ${media.mobileL} {
-    width: 250px;
+  @media ${media.tablet} {
+    width: 28rem;
   }
 `;
 

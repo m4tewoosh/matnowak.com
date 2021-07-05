@@ -41,24 +41,7 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
           left: 50%;
           height: 4px;
           border-radius: 100px;
-          background: radial-gradient(
-              29.9% 70.94% at 44.25% 86.96%,
-              #dc8ddc 0%,
-              rgba(220, 141, 220, 0) 100%
-            ),
-            radial-gradient(
-              33.83% 53.57% at 35.87% 100%,
-              #dc8ddc 0%,
-              rgba(220, 141, 220, 0) 100%
-            ),
-            linear-gradient(
-              128.53deg,
-              rgba(192, 169, 240, 0) 28.63%,
-              #c0a9f0 38.5%,
-              rgba(192, 169, 240, 0) 50.26%
-            ),
-            linear-gradient(0deg, #c2a6f1, #c2a6f1);
-          background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+          background: var(--gradient);
 
           transition: width 0.3s ease 0s, left 0.3s ease 0s;
         }
@@ -71,8 +54,8 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
     align-items: center;
     justify-content: center;
     background-color: #181333;
-    border-bottom: 2px solid #c2a6f0;
-    height: 50vh;
+    border-bottom: 2px solid white;
+    height: 70vh;
     width: 100vw;
     /* margin-top: 5rem; */
     position: absolute;
@@ -110,6 +93,18 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
     }
   }
 
+  @media ${media.tablet} {
+    button {
+      font-size: 2rem;
+      width: 16rem;
+      height: 6rem;
+      margin-top: 0.5rem;
+    }
+    ul li button {
+      font-size: 2.2rem;
+    }
+  }
+
   @media ${media.mobileL} {
     button {
       font-size: 2.2rem;
@@ -131,5 +126,9 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
     ul li button {
       font-size: 1.8rem;
     }
+  }
+
+  @media (max-height: 600px) {
+    height: 100vh;
   }
 `;

@@ -33,11 +33,15 @@ const StyledContainer = styled.div`
     transform: scale(0.4);
     margin-right: 3rem;
   }
+
+  @media (max-height: 600px) {
+    display: none;
+  }
 `;
 
 const StyledBlob = styled(Blob)`
   clip-path: url(#mainBlob);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   z-index: 200;
 `;
 
@@ -68,13 +72,11 @@ const StyledCircle2 = styled(Circle2)`
   bottom: 5rem;
   right: -6.4rem;
   z-index: 0;
-`;
 
-const StyledCircle3 = styled(Circle3)`
-  position: absolute;
-  bottom: -20rem;
-  left: -5rem;
-  z-index: 2;
+  @media ${media.mobileL} {
+    bottom: -15rem;
+    right: -3rem;
+  }
 `;
 
 const MainBlob: React.FC = () => {
@@ -83,7 +85,6 @@ const MainBlob: React.FC = () => {
       <StyledBlob />
       <StyledCircle1 />
       <StyledCircle2 />
-      {/* <StyledCircle3 /> */}
       <StyledContour1>
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"

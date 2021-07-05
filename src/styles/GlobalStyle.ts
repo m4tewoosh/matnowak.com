@@ -15,7 +15,9 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Poppins', sans-serif;
   }
-
+  :root{
+    --gradient:linear-gradient(to right, #EA8D8D , #A890FE);
+  }
   html{ 
     font-size: 62.5%;
     image-rendering: -webkit-optimize-contrast;
@@ -55,6 +57,7 @@ export default createGlobalStyle`
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background:linear-gradient(120deg, #a6c0fe 0%,#f68084 100%);
+  background:var(--gradient);
+  
 }
 `;

@@ -88,6 +88,10 @@ const ImageDiv = styled.div`
     text-align: center;
     color: white;
   }
+
+  @media ${media.mobileS} {
+    width: 15rem;
+  }
 `;
 
 const Header = styled.h2`

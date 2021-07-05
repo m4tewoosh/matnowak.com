@@ -92,6 +92,10 @@ export const StyledContent = styled.div`
     }
   }
 
+  @media (max-height: 600px) {
+    padding-top: 0;
+  }
+
   /* @media (max-height: 800px) {
     justify-content: center;
   } */
@@ -124,31 +128,7 @@ export const StyledName = styled.h2`
     font-family: inherit;
     font-weight: inherit;
     font-size: inherit;
-
-    background: linear-gradient(
-        123.35deg,
-        #ebf3d0 0%,
-        rgba(235, 243, 208, 0) 18.4%
-      ),
-      radial-gradient(
-        29.9% 70.94% at 44.25% 86.96%,
-        #dc8ddc 0%,
-        rgba(220, 141, 220, 0) 100%
-      ),
-      radial-gradient(
-        33.83% 53.57% at 35.87% 100%,
-        #dc8ddc 0%,
-        rgba(220, 141, 220, 0) 100%
-      ),
-      linear-gradient(
-        128.53deg,
-        rgba(192, 169, 240, 0) 28.63%,
-        #c0a9f0 38.5%,
-        rgba(192, 169, 240, 0) 50.26%
-      ),
-      linear-gradient(0deg, #c2a6f1, #c2a6f1);
-    background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
-
+    background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -177,14 +157,7 @@ export const StyledButton = styled.button`
   border: none;
   border-radius: 1rem;
   margin-top: 6rem;
-  background: linear-gradient(
-      128.53deg,
-      rgba(192, 169, 240, 0) 28.63%,
-      #c0a9f0 38.5%,
-      rgba(192, 169, 240, 0) 50.26%
-    ),
-    linear-gradient(0deg, #c2a6f1, #c2a6f1);
-  background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  background: var(--gradient);
   transition: transform 0.2s ease 0s;
   &:hover {
     cursor: pointer;
@@ -218,30 +191,7 @@ export const StyledSurname = styled.p`
       color: white;
     }
     &:last-child {
-      background: linear-gradient(
-          123.35deg,
-          #ebf3d0 0%,
-          rgba(235, 243, 208, 0) 18.4%
-        ),
-        radial-gradient(
-          29.9% 70.94% at 44.25% 86.96%,
-          #dc8ddc 0%,
-          rgba(220, 141, 220, 0) 100%
-        ),
-        radial-gradient(
-          33.83% 53.57% at 35.87% 100%,
-          #dc8ddc 0%,
-          rgba(220, 141, 220, 0) 100%
-        ),
-        linear-gradient(
-          128.53deg,
-          rgba(192, 169, 240, 0) 28.63%,
-          #c0a9f0 38.5%,
-          rgba(192, 169, 240, 0) 50.26%
-        ),
-        linear-gradient(0deg, #c2a6f1, #c2a6f1);
-      background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
-
+      background: var(--gradient);
       background-clip: text;
       -webkit-background-clip: text;
       -moz-background-clip: text;
@@ -257,6 +207,9 @@ export const StyledSurname = styled.p`
     margin-left: 10rem;
   }
   @media ${media.mobileL} {
+    margin-left: 0;
+  }
+  @media (max-height: 600px) {
     margin-left: 0;
   }
 `;
