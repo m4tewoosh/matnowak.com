@@ -1,4 +1,3 @@
-import React from 'react';
 import MainBlob from '../MainBlob/MainBlob';
 import MotionCircle from './MotionCircle';
 import MotionSquare from './MotionSquare';

@@ -29,21 +29,23 @@ export const StyledSquare = styled(Square)`
   top: -3rem;
   left: -2rem;
   z-index: 9000;
-  /* background-color: red; */
   rect {
     fill: black;
   }
   @media ${media.mobileL} {
-    /* font-size: 4.8rem; */
     top: -5rem;
   }
 `;
 
 export const ProjectWrapper = styled.div`
-  width: 100%;
+  max-width: 60%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10rem;
+
+  @media ${media.desktopL} {
+    max-width: 100%;
+  }
   @media ${media.tabletL} {
     flex-direction: column;
     align-items: center;

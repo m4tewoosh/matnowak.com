@@ -1,11 +1,7 @@
 import styled from 'styled-components';
 import { ReactComponent as Blob } from '../../assets/svg/mainBlob.svg';
-import { ReactComponent as Contour1 } from '../../assets/svg/contour1.svg';
-import { ReactComponent as Contour2 } from '../../assets/svg/contour2.svg';
-import { ReactComponent as Contour3 } from '../../assets/svg/contour3.svg';
 import { ReactComponent as Circle1 } from '../../assets/svg/circle1.svg';
 import { ReactComponent as Circle2 } from '../../assets/svg/circle2.svg';
-import { ReactComponent as Circle3 } from '../../assets/svg/circle3.svg';
 import media from '../../styles/media';
 import { motion } from 'framer-motion';
 
@@ -18,16 +14,20 @@ const StyledContainer = styled.div`
   @media ${media.desktop} {
     transform: scale(0.85);
   }
+
   @media ${media.laptopL} {
     transform: scale(0.8);
   }
+
   @media ${media.laptop} {
     transform: scale(0.7);
     margin-right: 3rem;
   }
+
   @media ${media.tablet} {
     transform: scale(0.55);
   }
+
   @media ${media.mobileL} {
     height: 45vh;
     transform: scale(0.4);

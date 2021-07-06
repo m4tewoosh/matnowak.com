@@ -57,7 +57,6 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
     border-bottom: 2px solid white;
     height: 70vh;
     width: 100vw;
-    /* margin-top: 5rem; */
     position: absolute;
     left: 0;
     top: 0;
@@ -67,7 +66,6 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
       isOpen ? 'translateX(0%)' : 'translateX(-100%)'};
 
     ul {
-      /* height: 100%; */
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -130,5 +128,22 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
 
   @media (max-height: 600px) {
     height: 100vh;
+  }
+`;
+
+export const StyledContact = styled.button`
+  font-size: 1.6rem;
+  font-weight: 500;
+  width: 12.5rem;
+  height: 4.5rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: transparent;
   }
 `;

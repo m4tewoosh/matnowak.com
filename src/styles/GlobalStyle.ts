@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import media from './media';
 export default createGlobalStyle`
-  /* Reset */
+  // Reset 
   *,
   *::before,
   *::after {
@@ -12,15 +12,21 @@ export default createGlobalStyle`
     font-weight: normal;
     text-decoration: none;
     -webkit-font-smoothing: antianalized;
+    image-rendering: -webkit-optimize-contrast;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Poppins', sans-serif;
   }
+  // CSS Variables
   :root{
     --gradient:linear-gradient(to right, #EA8D8D , #A890FE);
   }
+
+  body{
+    overflow-x: hidden;
+  }
+
   html{ 
     font-size: 62.5%;
-    image-rendering: -webkit-optimize-contrast;
 
     @media ${media.tablet}{
       font-size: 55%;
@@ -29,35 +35,17 @@ export default createGlobalStyle`
     @media ${media.laptop}{
       font-size: 50%;
     }
-   
- 
-  }
-  body { 
-    overflow-x: hidden;
   }
 
-  ::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
 
-}
+  ::-webkit-scrollbar {
+    width: 1.2rem;
+    background-color: #F5F5F5;
+    
+  }
 
-::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: #F5F5F5;
-  
-}
-
-::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background:var(--gradient);
-  
-}
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background:var(--gradient);
+  }
 `;

@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import media from '../../styles/media';
 
 export const TechnologiesContainer = styled.div`
-  width: 100vw;
-  background-color: #181333;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
   padding: 7rem 20rem;
+  background-color: #181333;
 
   @media ${media.laptopL} {
     padding: 5rem 5rem;
@@ -19,31 +19,20 @@ export const TechnologiesContainer = styled.div`
 `;
 
 export const SlideTrack = styled.div`
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  animation: scroll 1s linear;
-
-  @keyframes scroll {
-    0% {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+  flex-wrap: wrap;
+  width: 100%;
 `;
 
 export const ImageDiv = styled.div`
-  width: 20rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 20rem;
   padding: 3rem;
+
   > img {
     width: 10rem;
   }

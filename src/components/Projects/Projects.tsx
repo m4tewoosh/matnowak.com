@@ -35,28 +35,28 @@ const Projects: React.FC = () => {
         <S.CarouselWrapper justify="end">
           <Carousel showStatus={false} showThumbs={false}>
             <div>
-              <img src={containers0} />
+              <img src={containers0} alt="containers project" />
             </div>
             <div>
-              <img src={containers1} />
+              <img src={containers1} alt="containers project" />
             </div>
             <div>
-              <img src={containers2} />
+              <img src={containers2} alt="containers project" />
             </div>
             <div>
-              <img src={containers3} />
+              <img src={containers3} alt="containers project" />
             </div>
             <div>
-              <img src={containers4} />
+              <img src={containers4} alt="containers project" />
             </div>
             <div>
-              <img src={containers5} />
+              <img src={containers5} alt="containers project" />
             </div>
             <div>
-              <img src={containers6} />
+              <img src={containers6} alt="containers project" />
             </div>
             <div>
-              <img src={containers7} />
+              <img src={containers7} alt="containers project" />
             </div>
           </Carousel>
         </S.CarouselWrapper>
@@ -65,10 +65,10 @@ const Projects: React.FC = () => {
         <S.CarouselWrapper justify="start">
           <Carousel showStatus={false} showThumbs={false}>
             <div>
-              <img src={r1} />
+              <img src={r1} alt="sign up project" />
             </div>
             <div>
-              <img src={r2} />
+              <img src={r2} alt="sign up project" />
             </div>
           </Carousel>
         </S.CarouselWrapper>

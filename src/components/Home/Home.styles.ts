@@ -30,7 +30,6 @@ export const StyledSquare = styled(Square)`
   top: -25rem;
 
   @media ${media.mobileL} {
-    /* display */
     top: -11rem;
   }
 `;
@@ -43,48 +42,39 @@ export const StyledCirclesSquare = styled(CirclesSquare)`
 
 export const StyledContent = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
+  align-items: center;
   width: 100%;
   height: 100%;
   padding: 0rem 20rem;
 
   .spacer {
-    height: 100%;
     flex: 1;
     min-width: 20rem;
     max-width: 50rem;
   }
+
   @media ${media.desktop} {
     padding: 0rem 15rem;
   }
+
   @media ${media.laptopL} {
     padding: 0rem 10rem;
-    .spacer {
-      display: none;
-    }
   }
 
   @media ${media.tabletL} {
     flex-direction: column;
+    padding: 0rem 7rem;
     padding-top: 20rem;
     justify-content: center;
 
     .spacer {
-      display: flex;
       max-height: 5rem;
     }
   }
 
-  @media ${media.tabletL} {
-    padding: 0rem 7rem;
-    padding-top: 20rem;
-  }
   @media ${media.mobileL} {
-    /* padding: 5rem; */
-    /* padding-top: 40rem; */
-    padding: 0;
-    padding: 0 5.5rem;
+    padding: 0 6rem;
     justify-content: flex-end;
     align-items: center;
     .spacer {
@@ -94,11 +84,8 @@ export const StyledContent = styled.div`
 
   @media (max-height: 600px) {
     padding-top: 0;
-  }
-
-  /* @media (max-height: 800px) {
     justify-content: center;
-  } */
+  }
 `;
 
 export const StyledName = styled.h2`
@@ -113,21 +100,13 @@ export const StyledName = styled.h2`
     font-size: 5rem;
   }
   @media ${media.laptop} {
-    /* font-size: 5.2rem; */
     margin-bottom: 3rem;
-  }
-  @media ${media.tabletL} {
-    /* font-size: 4.8rem; */
-    margin-bottom: 3rem;
-  }
-  @media ${media.mobileL} {
-    /* font-size: 4.8rem; */
   }
 
   > span {
     font-family: inherit;
-    font-weight: inherit;
     font-size: inherit;
+    font-weight: inherit;
     background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
@@ -143,7 +122,6 @@ export const StyledText = styled.p`
   color: rgba(255, 255, 255, 0.7);
   max-width: 70rem;
   @media ${media.mobileL} {
-    /* font-size: 4.8rem; */
     text-align: start;
   }
 `;
@@ -159,6 +137,7 @@ export const StyledButton = styled.button`
   margin-top: 6rem;
   background: var(--gradient);
   transition: transform 0.2s ease 0s;
+
   &:hover {
     cursor: pointer;
     transform: translateY(-0.5rem);
@@ -212,23 +191,6 @@ export const StyledSurname = styled.p`
   @media (max-height: 600px) {
     margin-left: 0;
   }
-`;
-
-export const BlobWrapper = styled.div`
-  position: relative;
-  @media ${media.tabletL} {
-    transform: scale(0.9);
-  }
-  @media ${media.tablet} {
-    transform: scale(0.7);
-  }
-  @media ${media.mobileL} {
-    transform: scale(0.4);
-  }
-
-  /* @media (max-height: 800px) {
-    height: 25rem;
-  } */
 `;
 
 export const NameWrapper = styled.div`
