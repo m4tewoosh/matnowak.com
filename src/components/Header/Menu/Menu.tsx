@@ -30,7 +30,11 @@ const Menu: React.FC<MenuProps> = ({ isOpen, setIsOpen }) => {
           </Link>
         </li>
       </ul>
-      <StyledContact>Contact</StyledContact>
+      <Link to="contact" spy={true} smooth={true}>
+        <StyledContact onClick={() => setIsOpen(!isOpen)}>
+          Contact
+        </StyledContact>
+      </Link>
     </StyledMenu>
   );
 };

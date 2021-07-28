@@ -25,15 +25,13 @@ const images = {
   GraphQL,
 };
 
-console.log(images);
-
 const Technologies: React.FC = () => {
   return (
     <S.TechnologiesContainer id="technologies">
       <S.Header>Technologies</S.Header>
       <S.SlideTrack>
         {Object.entries(images).map(image => (
-          <S.ImageDiv>
+          <S.ImageDiv key={image[0]}>
             <img src={image[1]} alt={image[0]} />
             <p>{image[0]}</p>
           </S.ImageDiv>

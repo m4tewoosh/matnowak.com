@@ -55,7 +55,7 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
     justify-content: center;
     background-color: #181333;
     border-bottom: 2px solid white;
-    height: 70vh;
+    height: 55vh;
     width: 100vw;
     position: absolute;
     left: 0;
@@ -73,7 +73,7 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
       li {
         margin-bottom: 2rem;
         button {
-          font-size: 2.4rem;
+          font-size: 2.2rem;
         }
         &:first-child {
           margin-top: 2rem;

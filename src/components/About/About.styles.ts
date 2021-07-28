@@ -34,6 +34,10 @@ export const Text = styled.p`
     font-weight: 600;
     color: #181333;
   }
+
+  @media ${media.desktopL} {
+    max-width: 45%;
+  }
   @media ${media.desktop} {
     max-width: 60%;
   }

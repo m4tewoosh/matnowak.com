@@ -74,7 +74,7 @@ export const StyledContent = styled.div`
   }
 
   @media ${media.mobileL} {
-    padding: 0 6rem;
+    padding: 0 3rem;
     justify-content: flex-end;
     align-items: center;
     .spacer {
@@ -93,26 +93,59 @@ export const StyledName = styled.h2`
   font-family: 'Montserrat', sans-serif;
   font-size: 6.4rem;
   font-weight: 700;
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
   color: white;
 
   @media ${media.desktop} {
-    font-size: 5rem;
-  }
-  @media ${media.laptop} {
-    margin-bottom: 3rem;
+    font-size: 4.8rem;
   }
 
+  @media ${media.mobileS} {
+    text-align: center;
+    font-size: 3.6rem;
+  }
+  white-space: nowrap;
   > span {
+    position: relative;
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-text-stroke: 0.1rem white;
     background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+    -webkit-text-stroke: 1rem var(--gradient);
+
+    /* 
+    &::before {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      content: 'Nowak';
+      position: absolute;
+      background: var(--gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+      -webkit-text-stroke: 1rem var(--gradient);
+
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-right: 2px solid white;
+      overflow: hidden;
+      animation: animate 2s linear;
+    } */
   }
 `;
 
@@ -120,7 +153,7 @@ export const StyledText = styled.p`
   font-size: 1.8rem;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
-  max-width: 70rem;
+  max-width: 50rem;
   @media ${media.mobileL} {
     text-align: start;
   }
@@ -129,7 +162,7 @@ export const StyledText = styled.p`
 export const StyledButton = styled.button`
   font-size: 1.8rem;
   font-weight: 600;
-  color: black;
+  color: #181333;
   width: 17rem;
   height: 4.6rem;
   border: none;
@@ -193,10 +226,76 @@ export const StyledSurname = styled.p`
   }
 `;
 
+export const StyledReact = styled.h1`
+  position: relative;
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 6.4rem;
+  font-weight: 700;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  /* -webkit-text-stroke: 0.05rem white; */
+  @media ${media.desktop} {
+    font-size: 5rem;
+  }
+  @media ${media.laptop} {
+    margin-bottom: 3rem;
+  }
+  @media ${media.mobileS} {
+    font-size: 4rem;
+  }
+  animation: stroke 3s step-end;
+  animation-delay: 0.3s;
+
+  &::before {
+    width: 0;
+    font-weight: 700;
+    content: 'React developer';
+    position: absolute;
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    -webkit-text-stroke: 0rem;
+    border-right: 2px solid white;
+    animation: animate 3s cubic-bezier(0.26, 0.8, 0.55, 0.405);
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+  }
+
+  @keyframes animate {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes stroke {
+    0% {
+      -webkit-text-stroke: 0.05rem white;
+    }
+    100% {
+      -webkit-text-stroke: 0;
+    }
+  }
+`;
+
 export const NameWrapper = styled.div`
   @media ${media.mobileL} {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
   }
 `;

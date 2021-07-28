@@ -8,6 +8,7 @@ export const StyledProjects = styled.section`
   flex-direction: column;
   align-items: center;
   padding: 7rem 20rem;
+  background-color: white;
 
   > img {
     width: 60rem;

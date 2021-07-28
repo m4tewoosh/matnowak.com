@@ -82,7 +82,7 @@ const Projects: React.FC = () => {
             Personal app built with React, Ant Design, NodeJS and MongoDB. This
             app allows you to create an account, checks if your username isn't
             taken, email is valid and password is long enough. Validation is
-            done using library called react-hook-form. After your account is
+            done using library named react-hook-form. After your account is
             created you can log in to the panel.
           </p>
         </S.Description>
