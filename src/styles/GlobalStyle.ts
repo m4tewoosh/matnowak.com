@@ -18,7 +18,15 @@ export default createGlobalStyle`
   }
   // CSS Variables
   :root{
-    --gradient:linear-gradient(to right, #EA8D8D , #A890FE);
+
+    /* --gradient: radial-gradient(29.9% 70.94% at 44.25% 86.96%, #DC8DDC 0%, rgba(220, 141, 220, 0) 100%),
+      radial-gradient(33.83% 53.57% at 35.87% 100%, #DC8DDC 0%, rgba(220, 141, 220, 0) 100%),
+      radial-gradient(42.66% 49.72% at 45.56% 44.65%, #CBADEB 0%, rgba(194, 166, 241, 0) 100%),
+      linear-gradient(216.44deg, rgba(192, 169, 240, 0) -16.52%, #C0A9F0 -1.04%, rgba(192, 169, 240, 0) 16.99%),
+      linear-gradient(128.53deg, rgba(192, 169, 240, 0) 28.63%, #C0A9F0 38.5%, rgba(192, 169, 240, 0) 50.26%),
+      linear-gradient(0deg, #C2A6F1, #C2A6F1); */
+  --gradient:linear-gradient(to right, #EA8D8D , #A890FE);
+
   }
 
   body{
