@@ -267,7 +267,7 @@ export const StyledReact = styled.h1`
     height: 100%;
     -webkit-text-stroke: 0rem;
     border-right: 2px solid white;
-    animation: animate 3s cubic-bezier(0.26, 0.8, 0.55, 0.405);
+    animation: animate 2.5s cubic-bezier(0.26, 0.8, 0.55, 0.405);
     animation-delay: 0.3s;
     animation-fill-mode: forwards;
     overflow: hidden;
