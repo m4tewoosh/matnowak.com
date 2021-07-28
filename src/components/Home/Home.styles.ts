@@ -247,7 +247,7 @@ export const StyledReact = styled.h1`
   @media ${media.mobileS} {
     font-size: 4rem;
   }
-  animation: stroke 3s step-end;
+  animation: stroke 2.5s step-end;
   animation-delay: 0.3s;
 
   &::before {
