@@ -32,10 +32,13 @@ const Footer: React.FC = () => {
   return (
     <StyledFooter>
       <h3>matnowak.com © 2021</h3>
-      <a href="https://github.com/m4tewoosh">
+      <a href="https://github.com/m4tewoosh" target="_blank">
         <StyledGHIcon />
       </a>
-      <a href="https://www.linkedin.com/in/mateusz-nowak-a342741bb/">
+      <a
+        href="https://www.linkedin.com/in/mateusz-nowak-a342741bb/"
+        target="_blank"
+      >
         <StyledLinkedInIcon />
       </a>
     </StyledFooter>
