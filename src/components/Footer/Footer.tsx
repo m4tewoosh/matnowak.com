@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { ReactComponent as GitHubIcon } from '../../assets/png/icons/gh.svg';
-import { ReactComponent as LinkedInIcon } from '../../assets/png/icons/linkedin.svg';
+import { ReactComponent as GitHubIcon } from '../../assets/svg/gh.svg';
+import { ReactComponent as LinkedInIcon } from '../../assets/svg/linkedin.svg';
 
 const StyledFooter = styled.section`
   display: flex;
