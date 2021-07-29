@@ -10,7 +10,8 @@ export const StyledHeader = styled.header<{ scroll: number }>`
   width: 100%;
   padding: 0 23rem;
   height: 7rem;
-  background-color: ${({ scroll }) => scroll > 950 && '#181333'};
+  background-color: ${({ scroll }) =>
+    scroll >= window.innerHeight && '#181333'};
   transition: background-color 1s;
   @media ${media.tabletL} {
     background-color: unset;
