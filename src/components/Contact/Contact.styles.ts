@@ -41,15 +41,20 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   width: 50%;
-  @media (max-width: 425px) {
-    width: 100%;
-  }
   > div {
     width: 100%;
     margin-bottom: 4rem;
     label {
       font-family: 'Poppins', sans-serif;
     }
+  }
+
+  @media ${media.tabletL} {
+    width: 70%;
+  }
+
+  @media (max-width: 425px) {
+    width: 100%;
   }
 `;
 
@@ -65,7 +70,6 @@ export const SubmitButton = styled.button`
   height: 4.6rem;
   border: none;
   border-radius: 1rem;
-  /* margin-top: 6rem; */
   background: var(--gradient);
   transition: transform 0.2s ease 0s;
 

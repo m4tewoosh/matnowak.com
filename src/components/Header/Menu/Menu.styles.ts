@@ -126,9 +126,16 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
     }
   }
 
-  @media (orientation: landscape) and (max-height: 400px) and (max-width: 1000px) {
+  /* @media (orientation: landscape) and (max-height: 400px) and (max-width: 1000px) {
+    height: 100vh;
+  } */
+
+  @media (max-height: 600px) {
     height: 100vh;
   }
+  /* @media (orientation: portrait) and (max-height: 600px) and (max-width: 500px) {
+    height: 100vh;
+  } */
 `;
 
 export const StyledContact = styled.button`
