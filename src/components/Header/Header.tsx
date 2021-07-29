@@ -10,6 +10,7 @@ const Header: React.FC = () => {
   document.addEventListener('scroll', () => {
     setScroll(window.scrollY);
   });
+
   return (
     <StyledHeader scroll={scroll}>
       <Burger isOpen={isOpen} setIsOpen={setIsOpen} />

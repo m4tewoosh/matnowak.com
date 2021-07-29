@@ -126,7 +126,7 @@ export const StyledMenu = styled.nav<StyledMenuProps>`
     }
   }
 
-  @media (max-height: 600px) {
+  @media (orientation: landscape) and (max-height: 400px) and (max-width: 1000px) {
     height: 100vh;
   }
 `;
