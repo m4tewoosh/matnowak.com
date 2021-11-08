@@ -1,7 +1,7 @@
-import { useForm, Controller } from 'react-hook-form';
-import * as S from './Contact.styles';
-import emailjs from 'emailjs-com';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import { useForm, Controller } from "react-hook-form";
+import emailjs from "emailjs-com";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import * as S from "./Contact.styles";
 
 interface IFormInput {
   email: string;
@@ -15,23 +15,23 @@ const Contact: React.FC = () => {
   const onSubmit = (data: any, e: any) => {
     emailjs
       .send(
-        'service_qlzlf5y',
-        'template_hoekezf',
+        `${process.env.REACT_APP_EMAILJS_SERVICE_ID}`,
+        `${process.env.REACT_APP_EMAILJS_TEMPLATE}`,
         data,
-        'user_1pkUP9jOjieLAMdhL2O7a',
+        `${process.env.REACT_APP_EMAILJS_USER_ID}`
       )
       .then(
-        result => {
+        (result) => {
           e.target.reset();
         },
-        error => {
+        (error) => {
           console.log(error.text);
-        },
+        }
       );
     reset({
-      email: '',
-      name: '',
-      text: '',
+      email: "",
+      name: "",
+      text: "",
     });
   };
 
@@ -44,12 +44,12 @@ const Contact: React.FC = () => {
           control={control}
           defaultValue=""
           rules={{
-            required: 'Email missing',
+            required: "Email missing",
             pattern: {
               value:
                 // eslint-disable-next-line
                 /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-              message: 'Incorrect email',
+              message: "Incorrect email",
             },
           }}
           render={({ field: { onChange, value }, fieldState: { error } }) => (
@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
           control={control}
           defaultValue=""
           rules={{
-            required: 'Name missing',
+            required: "Name missing",
           }}
           render={({ field: { onChange, value }, fieldState: { error } }) => (
             <>
@@ -95,7 +95,7 @@ const Contact: React.FC = () => {
           control={control}
           defaultValue=""
           rules={{
-            required: 'Text missing',
+            required: "Text missing",
           }}
           render={({ field: { onChange, value }, fieldState: { error } }) => (
             <>
